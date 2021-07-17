@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container-menu {
+    display: none;
+    left: -100%;
+}
+
+.container-cross{
+    display: none;
+    position: absolute;
+    top:46px;
+    right: 26px;
+    z-index: 2;
+}
+
+.container-aside {
+    margin: 12vh 0 0 8vw;
+}
+
+.container-aside-list{
+    display: flex;
+    flex-direction: column;
+    font-family: Source Sans Pro, serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+    background-color: #ffffff;
+}
+
+.container-aside-inner-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15vh;
+    font-family: Source Sans Pro, serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+    color: #B9B9B9;
+}
+
+.container-aside-list-line {
+    display: flex;
+    margin-bottom: 2.0vh;
+}
+
+.container-aside-list-line-text {
+    text-decoration: none;
+    color: #B9B9B9;
+    margin-left: 15px;
+}
+
+.container-aside-list-line-text:hover {
+    color: #FF3C5A;
+}
+
+.container-list-table-item-text-cl{
+    position: absolute;
+    top: 140px;
+}
+
+.container-list {
+    display: flex;
+    flex-direction: column;
+    margin: 1.47vh 2.4vw 1.7vh 4vw;
+    width: 55vw;
+    min-width: 375px;
+    padding: 6.4vh 1.4vw 3.4vh 1.4vw;
+    background: #EDEDED;
+    border-radius: 50px;
+}
+
+.container-list-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 175px);
+    grid-template-rows: repeat(auto-fill, 175px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.container-list-table-item {
+    width: 175px;
+    height: 175px;
+    margin: 0.7vw;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-image: url("../images/grey_courses_background.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+}
+
+.container-list-table-item:hover {
+    background-image: url("../images/red_courses_background.svg");
+    transform: scale(1.1, 1.1);
+}
+
+.container-list-table-item-text {
+    position: relative;
+    margin-left: 20px;
+    font-family: Source Sans Pro, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.container-list-text {
+    margin-left: 47px;
+    font-family: Source Sans Pro, serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #EDEDED;
+    }
+
+    .container-aside {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .container-aside-list {
+        display: flex;
+        align-items: center;
+        padding-top: 150px;
+        position: fixed;
+        margin-top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100vw;
+        color: #B9B9B9;
+    }
+
+    .container-list {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        width: 335px;
+        margin: 0;
+    }
+
+    .container-list-text {
+        display: none;
+    }
+
+    .container-list-table{
+        justify-content: flex-start;
+    }
+
+    .container-list-table-item {
+        width: 332px;
+        height: 175px;
+        margin: 0.7vw;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../images/grey_courses_adaptive_background.svg") ;
+    }
+
+    .container-list-table-item:hover {
+        background-image: url("../images/red_courses_adaptive_background.svg");
+        transform: scale(1.1, 1.1);
+    }
+
+    .container-menu {
+        display: flex;
+        position: fixed;
+        left: 25px;
+        top: 40px;
+        z-index: 1;
+    }
+
+    .container-menu-show{
+        background-color: #ffffff;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .list_close{
+        display: flex;
+    }
+}
